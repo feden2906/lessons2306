@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <form action = "login" method="post">
+            <input type = "text" name = "email">
+            <input type = "text" name = "password">
+            <input type = "submit" value = "sign-in">
+        </form>
+        {{#if loginError}}
+            not the correct email or password,
+            do you want to <a href="registration">register</a>?
+        {{/if}}
+    </body>
+</html>

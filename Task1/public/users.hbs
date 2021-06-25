@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <a href="/"><input type="button" name="home" value="Home page"></a>
+        {{#each jsonFile}}
+            <div style="border: black solid 1px">
+                <div>Email: {{this.email}}</div>
+                <div>age: {{this.age}}</div>
+                <div>gender {{this.gender}}</div>
+            </div>
+        {{/each}}
+    </body>
+</html>

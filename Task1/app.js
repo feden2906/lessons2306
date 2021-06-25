@@ -16,6 +16,7 @@ app.engine('.hbs', handleBars({
     defaultLayout: false
 }));
 app.set('views', path.join(__dirname, publicDir));
+
 app.listen(3000, () => {
     console.log('App listen is 3000');
 });
@@ -60,7 +61,6 @@ app.post('/registration', (req, res) => {
             res.render('registration', {error: true});
             return;
             }
-
         }
     jsonFile.push(req.body);
     fs.writeFile(path.join(__dirname, publicDir, 'users.json'), JSON.stringify(jsonFile), err => {
